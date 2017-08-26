@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - sbt dist
+  post_build:
+    commands:
+      - mkdir ./target/universal/snapshot
+      - unzip ./target/universal/*.zip -d ./target/universal/snapshot
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: target/universal/snapshot

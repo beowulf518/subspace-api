@@ -1,0 +1,1 @@
+web: sh ./bin/terrella-api -Dhttp.port=5000 -Dconfig.file=./conf/application.conf -Dplay.http.secret.key='asdf;lkjasdf'
